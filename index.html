@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="animations.js" defer></script>
+</head>
+<body>
+    <a href="" id="back-home">Home</a>
+
+    <span id="background-title">Choose</span>
+
+    <div class="back-button"> 
+        <span class="material-icons">arrow_back</span>
+    </div>
+
+    <div id="landing-page">
+        <div class="landing-boxes study-box" id="study-box">
+            <h3>Study Timer</h3>
+            <div class="profile-img study-img"> 
+                <span class="material-icons">school</span>
+            </div>
+        </div>
+
+        <div class="landing-boxes workout-box" id="workout-box">
+            <h3>Workout Timer</h3>
+            <div class="profile-img workout-img">
+                <span class="material-icons">fitness_center</span>
+            </div>
+        </div>
+
+        <div class="workout-background-hover">
+            <span class="material-icons">fitness_center</span>
+            <span class="material-icons">fitness_center</span>
+            <span class="material-icons">fitness_center</span>
+            <span class="material-icons">fitness_center</span>
+        </div>
+
+        <div class="study-background-hover">
+            <span class="material-icons">school</span>
+            <span class="material-icons">school</span>
+            <span class="material-icons">school</span>
+            <span class="material-icons">school</span>
+        </div>
+    </div>
+
+    <div id="container">
+        <h2>Set up your Timer</h2>
+        <div class="fields">
+            <label class="elements" for="numberOfExercises">No. of exercises</label><br>
+            <input class="elements" type="number" id="numberOfExercises"><br>
+        </div>
+        <div class="fields">
+            <label class="elements" for="timePerExercise">Time per exercise(in seconds)</label><br>
+            <input class="elements" type="number" id="timePerExercise"><br>
+        </div>
+        <div class="fields">
+            <label class="elements" for="restTimeBetweenExercise">Rest time between exercises</label><br>
+            <input class="elements" type="number" id="restTimeBetweenExercise"><br>
+        </div>
+
+        <button onclick="run()">Submit</button>
+    </div>
+    
+    <div id="popcontainer">
+        <h2 id="totalWorkoutTime">Total Workout Time: </h2>
+        <button onclick="start()" id="startbtn">Start</button>
+        <button onclick="reset()" id="resetbtn">Reset</button>
+    </div>
+</body>
+</html>

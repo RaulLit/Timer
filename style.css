@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    --blue: hsl(220, 50%, 70%);
+    --light-blue: hsl(220, 50%, 80%);
+    --green: hsl(125, 55%, 60%);
+    --light-green: hsl(125, 55%, 70%);
+    height: 100vh;
+    background: white;
+    overflow: hidden;
+    transition: all 0.1s ease;
+}
+.blue-theme{
+    background: linear-gradient(var(--blue), var(--blue), var(--light-blue), white);
+}
+.green-theme{
+    background: linear-gradient(var(--green), var(--green), var(--light-green), white);
+}
+
+#background-title{
+    position: absolute;
+    top: 0px;
+    color: lightgrey;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-transform: uppercase;
+    font-size: 12rem;
+    letter-spacing: 2rem;
+    line-height: 10rem;
+    font-family: monospace;
+    cursor: default;
+    z-index: -1;
+}
+#background-title.study{
+    color: white;
+}
+#background-title.workout{
+    color: white;
+}
+#landing-page{
+    width: 80vw;
+    height: 60vh;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.landing-boxes{
+    height: 300px;
+    width: 300px;
+    border: none;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+}
+.landing-boxes:hover .profile-img {
+    box-shadow: 2px 2px 25px 5px gray;
+}
+.landing-boxes:hover h3{
+    text-shadow: 0 2px 20px 5px gray;
+}
+
+.workout-background-hover{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top left, var(--blue), var(--blue), white, white, white);
+    z-index: -1;
+    transform: translate(100%, 100%);
+    transition: all 0.2s ease-in-out;
+}
+.workout-background-hover span:nth-child(1){
+    position: absolute;
+    top: 15rem;
+    right: 10rem;
+    font-size: 3rem;
+}
+.workout-background-hover span:nth-child(2){
+    position: absolute;
+    top: 40rem;
+    right: 4rem;
+    font-size: 3rem;
+}
+.workout-background-hover span:nth-child(3){
+    position: absolute;
+    top: 30rem;
+    right: 15rem;
+    font-size: 3rem;
+}
+.workout-background-hover span:nth-child(4){
+    position: absolute;
+    top: 37rem;
+    right: 35rem;
+    font-size: 3rem;
+}
+.workout-box:hover ~ .workout-background-hover{
+    transform: translate(0, 0);
+}
+/* ***********study hover effect********** */
+.study-background-hover{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top right, var(--green), var(--green), white, white, white);
+    z-index: -1;
+    transform: translate(-100%, 100%);
+    transition: all 0.2s ease-in-out;
+}
+.study-background-hover span:nth-child(1){
+    position: absolute;
+    top: 15rem;
+    left: 10rem;
+    font-size: 3rem;
+}
+.study-background-hover span:nth-child(2){
+    position: absolute;
+    top: 40rem;
+    left: 4rem;
+    font-size: 3rem;
+}
+.study-background-hover span:nth-child(3){
+    position: absolute;
+    top: 30rem;
+    left: 15rem;
+    font-size: 3rem;
+}
+.study-background-hover span:nth-child(4){
+    position: absolute;
+    top: 37rem;
+    left: 35rem;
+    font-size: 3rem;
+}
+.study-box:hover ~ .study-background-hover{
+    transform: translate(0, 0);
+}
+
+.landing-boxes h3{
+    font-family: monospace;
+    font-size: 2rem;
+    color: grey;
+    margin: 0 0 10px 0;
+    cursor: default;
+}
+.profile-img{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    margin: auto;
+    cursor: pointer;
+}
+.study-img{
+    background: var(--green);
+}
+.study-img span{
+    font-size: 5rem;
+    color: white;
+}
+.workout-img{
+    background: var(--blue);
+}
+.workout-img span{
+    font-size: 5rem;
+    color: white;
+}
+
+#container{
+    background: white;
+    color: black;
+    max-width: 60vw;
+    height: 350px;
+    margin: 170px auto 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    visibility: hidden;
+    z-index: 1;
+}
+#container h2{
+    padding: 20px 0;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: monospace;
+} 
+.fields{
+    margin: 15px 0;    
+}
+#popcontainer {
+    background: white;
+    color: black;
+    width: 300px;
+    height: 400px;
+    margin: 100px auto 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.back-button{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 20px;
+    background: white;
+    position: fixed;
+    margin: 20px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: none;
+    visibility: hidden;
+}
+.back-button span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+/*  * BASIC STYLING 
+    * ADDING SOUND IS REMAINING
+    * CUSTOM INPUT FIELDS 
+    * Scroll dial
+    * large font "Workout"*/
+
+#back-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    padding: 15px;
+    color: var(--blue);
+    box-shadow: 0 0 10px 1px gray;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
