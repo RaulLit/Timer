@@ -11,9 +11,9 @@
     <script src="animations.js" defer></script>
 </head>
 <body>
-    <a href="https://raullit.github.io/Site%202/work.html" id="back-home">Home</a>
-
-    <span id="background-title">Choose</span>
+    <audio src="sound/finish-sound.wav" loop id="finish-sound"></audio>
+    <a id="back-home" href="https://raullit.github.io/Site%202/work.html"><span class="material-icons">home</span>Home</a>
+    <span id="background-title" >Choose</span>
 
     <div class="back-button"> 
         <span class="material-icons">arrow_back</span>
@@ -53,15 +53,15 @@
         <h2>Set up your Timer</h2>
         <div class="fields">
             <label class="elements" for="numberOfExercises">No. of exercises</label><br>
-            <input class="elements" type="number" id="numberOfExercises"><br>
+            <input class="elements" type="number" id="numberOfExercises" placeholder="Exercise"><br>
         </div>
         <div class="fields">
-            <label class="elements" for="timePerExercise">Time per exercise(in seconds)</label><br>
-            <input class="elements" type="number" id="timePerExercise"><br>
+            <label class="elements" for="timePerExercise">Time per exercise</label><br>
+            <input class="elements" type="number" id="timePerExercise-min" placeholder="Min"> : <input class="elements" type="number" id="timePerExercise-sec" placeholder="Sec"><br>
         </div>
         <div class="fields">
             <label class="elements" for="restTimeBetweenExercise">Rest time between exercises</label><br>
-            <input class="elements" type="number" id="restTimeBetweenExercise"><br>
+            <input class="elements" type="number" id="restTimeBetweenExercise" placeholder="In Sec"><br>
         </div>
 
         <button onclick="run()">Submit</button>
@@ -71,6 +71,8 @@
         <h2 id="totalWorkoutTime">Total Workout Time: </h2>
         <button onclick="start()" id="startbtn">Start</button>
         <button onclick="reset()" id="resetbtn">Reset</button>
+        <button onclick="stopSound()" id="stopbtn">Stop Sound</button>
     </div>
+
 </body>
 </html>
