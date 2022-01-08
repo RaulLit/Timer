@@ -1,6 +1,7 @@
 *{
     margin: 0;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 body{
     --blue: hsl(220, 50%, 70%);
@@ -22,12 +23,12 @@ body{
 #background-title{
     position: absolute;
     top: 0px;
-    color: lightgrey;
+    color: gray;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-48%, 0);
     text-transform: uppercase;
-    font-size: 12rem;
-    letter-spacing: 2rem;
+    font-size: 6em; /*12rem*/
+    letter-spacing: 3rem; 
     line-height: 10rem;
     font-family: monospace;
     cursor: default;
@@ -149,8 +150,8 @@ body{
 }
 .profile-img{
     display: flex;
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     justify-content: center;
     align-items: center;
     border-radius: 30px;
@@ -176,35 +177,58 @@ body{
     background: white;
     color: black;
     max-width: 60vw;
-    height: 350px;
+    min-height: 400px;
     margin: 170px auto 0 auto;
-    padding: 20px;
+    padding: 2rem min(10%, 12rem, 400px) 2rem min(10%, 12rem, 400px);
     border-radius: 10px;
     display: none;
     visibility: hidden;
     z-index: 1;
 }
 #container h2{
-    padding: 20px 0;
+    padding: 0 0 20px 0;
     text-decoration: underline;
     text-transform: uppercase;
     font-size: 30px;
     font-family: monospace;
+    text-align: center;
 } 
 .fields{
     margin: 15px 0;    
 }
+.fields input {
+    font-size: 1.8rem;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    width: min()
+}
+input:focus {
+    outline: none;
+}
+input::-webkit-inner-spin-button, 
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#timePerExercise-min,
+#timePerExercise-sec {
+    width: 4rem;
+    text-align: center;
+
+}
 #popcontainer {
     background: white;
     color: black;
-    width: 300px;
+    max-width: 20vw;
     height: 400px;
-    margin: 100px auto 0 auto;
+    margin: 170px auto 0 auto;
     padding: 20px;
     border-radius: 10px;
     display: none;
     visibility: hidden;
     z-index: 1;
+    text-align: center;
 }
 
 .back-button{
@@ -239,10 +263,18 @@ body{
     left: 0;
     margin: 20px;
     padding: 15px;
-    color: var(--blue);
-    box-shadow: 0 0 10px 1px gray;
+    box-shadow: 0 0 20px 1px hsl(0, 0%, 75%);
     border-radius: 20px;
-    text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stopbtn{
+    display: none;
+    visibility: hidden;
 }
