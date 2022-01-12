@@ -278,3 +278,16 @@ input::-webkit-outer-spin-button {
     display: none;
     visibility: hidden;
 }
+#study-container{
+    background: white;
+    color: black;
+    max-width: 60vw;
+    min-height: 400px;
+    margin: 170px auto 0 auto;
+    padding: 2rem min(10%, 12rem, 400px) 2rem min(10%, 12rem, 400px);
+    border-radius: 10px;
+    display: none;
+    visibility: hidden;
+    text-align: center;
+    font-size: 4rem;
+}
